@@ -1,0 +1,19 @@
+#! /bin/bash -x
+
+#variable
+emp_check=$((RANDOM%2)) # 0/1
+
+#constant varible
+is_present=1
+wage_per_hour=20
+
+#selection
+if [ $emp_check -eq $is_present ]
+then
+emp_hours=8
+salary=$(( emp_hours * wage_per_hour ))
+echo "Employee is present and daily wage is $salary"
+else
+salary=0
+"Employee is absent and daily wage is $salary"
+fi
